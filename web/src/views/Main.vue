@@ -1,7 +1,7 @@
 <template>
   <div class="Main">
 학교코드
-  <input type="text" class="univ_id" v-model="univ_id">
+  <input type="text" v-model="univ_id">
   <button @click="go">검색</button>
   </div>
 </template>
@@ -10,8 +10,13 @@
 
 export default {
   name: 'Main',
+  data() {
+    return {
+      univ_id : ''
+    }
+  },
   methods:{
-    go (){q
+    go (){
       if(this.univ_id=="1"){
       this.$router.push('/dmap')}
     }
